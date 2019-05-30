@@ -1,0 +1,43 @@
+package com.cisco.scala
+
+import scala.collection.mutable.ListBuffer
+
+object ListDemo {
+  def main(args: Array[String]): Unit = {
+    val list = ListBuffer[Int](1,2,3)
+    list.append(4,5,6)
+    list.foreach(println)
+
+
+//    val list = List[String]("Hello scala","Hello spark","Hello spark","a","b","c")
+//    val i = list.count(s => {
+//      s.length < 4
+//    })
+//    println(i)
+
+
+//    val result = list.filter(s=>{
+//      //filter为true的会留下来
+//      "Hello scala".equals(s)
+//    })
+//    result.foreach(println)
+
+    //flatMap
+//    val result = list.flatMap(s=>{s.split(" ")})
+//    result.foreach(println)
+
+
+//    list.foreach(println)
+//    val result = list.+("aaa")
+//    println(result)
+    //list中的元素是Array,首先将Array中的数据每一条都拿到，然后再进行遍历
+    //拿到一个字符串切分之后，再进行
+//    val result:List[Array[String]]=list.map(s=>{
+//       s.split(" ")
+//    })
+//    result.foreach(arr=>{
+//      println("新的数组")
+//      arr.foreach(println)
+//    })
+  }
+}
