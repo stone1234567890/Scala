@@ -1,0 +1,120 @@
+package com.cisco.scala
+
+/**
+  *Scala:
+  * 1.Scala object相当于Java的单例，Object中定义的全都是静态的，相当于Java的工具类。main方法是静态的，必须要写在Object中才能够运行
+  * 2.Scala中定义变量使用var，定义常量使用val，变量可变，常量不可变，变量和常量类型可以省略不写，会自动推断
+  * 3.Scala中每行后面都有自动分号自动推断机制，不用显式写出分号
+  * 4.建议在Scala中命名使用驼峰命名法
+  * 5.Scala类中，可以传参，有了参数就有了默认的构造，传参一定要指定类型，类中的属性默认有getter和setter方法
+  * 6.类中重写构造函数，构造中第一行必须先调用默认的构造，dff this(...)
+  * 7.Scala中，当New class(类)的时候，类中除了方法不执行，其他的都执行
+  * 8.在同一个Scala文件中，class名称和Object名称一样的时候，这个类叫做这个对象的伴生类，这个对象叫做这个类的伴生对象，他们之间可以访问私有变量
+  * 9.当传入的对象中有参数的时候，这个里面一定有apply()方法的
+  */
+class Person(xname:String,xage:Int){
+  val name = xname
+  val age = xage
+  var gender = 'M'
+
+//  println("***********Person Class********")
+  def this(yname:String,yAge:Int,yGender:Char){
+    this(yname,yAge)
+    this.gender=yGender
+  }
+
+  def sayName(): Unit ={
+//    println("hello world......"+ClassAndObj.name)
+  }
+//  println("***********Person Class=========********")
+}
+object ClassAndObj {
+//  ClassAndObj(1000)
+//  ClassAndObj("jack",1000)
+//
+//
+//  def apply(i:Int): Unit ={
+//    println("score is "+i)
+//  }
+//
+//  def apply(s:String,i:Int): Unit ={
+//    println("name is "+s+"score is"+i)
+//  }
+//  println("#########Class Object#######")
+//  val name="王五"
+//  //Object是静态的，main方法是静态的，所以必须定义在这里面
+  //这里得到的是一个向量vector
+//  def main(args: Array[String]): Unit = {
+//  val result = for(i<-1 to 1000 if(i>500) if(i%2==0)) yield i*3
+//  println(result)
+//  for(i<- 1 to 1000 if(i>500) if(i%2==0)){
+//    print(i+" ")
+//  }
+
+
+  /**
+    * 9x9循环
+    */
+//  for(i<- 1 until 10){
+//    for(j <- 1 until 10){
+//      if(i>=j){
+//        print(i+"*"+j+"="+i*j+"\t")
+//      }
+//      if(i==j){
+//        println()
+//      }
+//    }
+//  }
+
+
+
+  /**
+    *for循环
+    *
+    * 1 to 10 是一个range集合，until是不包含10的
+    */
+//  val r = 1 to 10
+//  println(r)
+//  var r1 = 1.to(10,2)   //1到10，中间的步长为2
+//  println("r1"+r1)
+//
+//  val s = 1 until 10
+//  print(s)
+//  for(i<- 1 to 10){
+//    println(i)
+//  }
+
+
+
+
+
+
+
+  /**
+    *
+    * if .....else....
+    * 类和对象
+    */
+//    val age =20
+//    if(age<=20){
+//      println("age<=20")
+//    }else if(age>20&&age<=30) {
+//      println("age>20 and age < 30")
+//    }else{
+//      println("age>30")
+//    }
+  //    val p = new Person("zhangsan",20)
+//    println(p.gender)
+//    val p1 = new Person("diaoChan",34,'F')
+//    println(p1.gender)
+//    println(p.name)
+//    println(p.age)
+//    p.sayName()
+//    println("hello world")
+//    val a = 100
+//    println(a)
+//    var b=200
+//    println(b)
+
+  }
+}
