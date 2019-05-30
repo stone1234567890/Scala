@@ -1,0 +1,65 @@
+package com.cisco.scala
+
+object Array1 {
+  def main(args: Array[String]): Unit = {
+    //可变数组
+    import scala.collection.mutable.ArrayBuffer
+    val arr= ArrayBuffer[Int](1,2,3,4,5,6,7)
+    //向arr中添加元素
+    arr.+=(8)
+    //向数组头部加上100
+    arr.+=:(100)
+    arr.append(7,8,9,10)
+    //遍历数组的每个元素
+    arr.foreach(println)
+
+    //创建数组，代表当前Array中有4个元素
+//    val arr1=Array[String]("a","b","c","d")
+//    val arr2=Array[String]("e","f","g")
+    //对两个表进行连接，连接之后进行遍历操作
+//    val arrs:Array[String]=Array.concat(arr1,arr2)
+//    arrs.foreach(println)
+
+    //第二种遍历的方式,在array中填充5个元素
+//    val array:Array[String] = Array.fill(5)("hello")
+//    array.foreach(println)
+
+    //定义一个二维数组
+//    val array2 = new Array[Array[Int]](3)
+//    array2(0) = Array[Int](1,2,3)
+//    array2(1) = Array[Int](4,5,6)
+//    array2(2) = Array[Int](7,8,9)
+    //遍历二维数组
+//    for(arr<-array2){
+//      for(elem<-arr){
+//        print(elem+" ")
+//      }
+//    }
+    //或者通过下面的这种方式进行遍历
+//    for(arr<-array2;elem<-arr){
+//      print(elem+" ")
+//    }
+    //对于arr里面进行遍历，得到每个元素(Array)之后再进行遍历
+//    array2.foreach(arr=>{arr.foreach(println)})
+
+
+    //第二种创建数组的方式
+//    val arr1 = new Array[Int](3)
+//    arr1(0)= 100
+//    arr1(1)=200
+//    arr1(2)=300
+//    arr1.foreach(println)
+    //遍历数组，或者用下面的方式进行遍历
+    //第一种遍历的方式
+//     arr.foreach(s=>{
+//       print(s+" ")
+//     })
+    //第二种遍历方式
+//    arr.foreach(println)
+    //第三种遍历方式
+//    for(elem<-arr){
+//      print(elem+" ")
+//    }
+  }
+
+}
