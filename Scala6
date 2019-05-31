@@ -1,0 +1,67 @@
+package com.cisco.scala
+
+import scala.collection.mutable
+
+object MapDemo {
+  def main(args: Array[String]): Unit = {
+    //可变的map
+    import scala.collection.mutable.Map
+    val map = Map[String,Int]()
+    map.put("a",100)
+    map.put("b",200)
+    map.foreach(println)
+    //filter需要返回bool类型
+    val result:mutable.Map[String,Int] = map.filter(tp=>{
+      //拿到key值
+      val key = tp._1
+      val value = tp._2
+      value==200
+    })
+
+    result.foreach(println)
+
+
+
+    //map是不可变的集合
+//    val map1 = Map[String,Int](("a",1),("b",2),("c",3))
+//    val map2 = Map[String,Int](("a",100),("b",2),("c",300),("e",500))
+//    val result:Map[String,Int]= map1.++(map2)
+//    result.foreach(println)
+
+//    val map = Map[String,Int]("a"->100,"b"->200,("c",300),("c",400))
+    //map中不能有重复的键，有重复的键则后面的值会将前面的值覆盖
+    //遍历最后结果是将map中重复的键去除重复元素
+//    println(map)
+//    println("第一种遍历方式")
+//    map.foreach(println)
+//    println("第二种遍历方式")
+//    for(elem<-map){
+//      println(elem)
+//    }
+//    val maybeInt :Option[Int]= map.get("a")
+//    println(maybeInt)
+  //遍历所有的key值
+//    val keys:Iterable[String] = map.keys
+//    println("第一种遍历的方式")
+//    keys.foreach(println)
+//    println("第二种遍历的方式")
+//    keys.foreach(key=>{
+//      println(map.get(key))
+//    })
+
+    //遍历所有的value值
+    //第一种遍历的方式
+//    val values:Iterable[Int] = map.values
+//    values.foreach(v=>{
+//      println(v)
+//    })
+//    //第二种遍历的方式
+//    values.foreach(println)
+
+
+
+
+
+  }
+
+}
