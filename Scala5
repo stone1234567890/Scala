@@ -1,0 +1,49 @@
+package com.cisco.scala
+
+object SetDemo {
+  def main(args: Array[String]): Unit = {
+    //set是无须不重复的,默认是不可变的
+    //创建set的时候,最好也指定类型,不指定类型的话会有各种类型在一起
+//     val set = Set[Int](1,2,3,4,4,5)
+//     set.foreach(println)
+    //通过这种方式进行遍历打印里面的数据
+//    for(elem<-set){
+//      println(elem)
+//    }
+//    val set1 =Set[Int](1,2,3,4)
+//    val set2 = Set[Int](3,4,5,6)
+
+    //过滤操作,返回的仍然是一个set类型的集合
+//    val result1 = set1.filter(elem=>{
+//      elem>=2
+//    })
+//    result1.foreach(println)
+
+//    //求出两个set的交集
+//    val result:Set[Int]=set1.intersect(set2)
+//    result.foreach(println) //打印出交集
+//    //求出来给你个结合的交集
+    //定义一个返回值result1，返回值的类型是Set[Int]
+//    val result1:Set[Int] = set1.diff(set2)
+//    result1.foreach(println)
+    //操作符操作,取出交集
+//    val result = set1 & set1
+//    println(result)
+
+    //可边长的set
+    import  scala.collection.mutable.Set
+    val set = Set[Int](1,2,3)
+    set.+=(100)  //使用apply方法应用在最后面,使用+=的方式向set中添加元素
+    set.foreach(println)
+
+
+    //定义一个不可变的set集合
+    import scala.collection.immutable.Set
+    val set1 = Set[String]("a","b")
+   
+
+
+
+  }
+
+}
