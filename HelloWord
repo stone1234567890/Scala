@@ -1,0 +1,9 @@
+object ClassAndObj {
+  /**
+    * Scala入门之hello world
+    * @param args
+    */
+  def main(args: Array[String]): Unit = {
+    println("Hello world")
+  }
+}
