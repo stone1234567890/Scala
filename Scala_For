@@ -1,0 +1,21 @@
+object ClassAndObj {
+  def main(args: Array[String]): Unit = {
+    /**
+      * for
+      * for循环会从1到10 进行循环
+      */
+    for(i<- 1 to 10){
+      println("for i="+i)
+    }
+
+    /**
+      * until
+      * until是从1到9的
+      */
+    for(i<-1 until 10){
+      println("until i="+i)
+    }
+
+  }
+
+}
