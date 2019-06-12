@@ -1,0 +1,24 @@
+//创建一个类，给这个类传递了两个参数，传递的参数一定要指定值的类型
+class Person(var xname:String,xage:Int){
+  val name =xname
+  var age = xage
+  var gender = 'M'
+  def this(yname:String,yage:Int,ygender:Char){
+    this(yname,yage)
+    this.gender=ygender
+  }
+  def sayName(): Unit ={
+    println("hello world  "+ClassAndObj.name)
+  }
+}
+
+object ClassAndObj {
+  val name ="wang wu "
+  def main(args: Array[String]): Unit = {
+   val p1 = new Person("zhangsan",20)
+    println(p1.gender)
+   val p2 = new Person("jack",15,'F')
+    println(p2.gender)
+
+  }
+}
