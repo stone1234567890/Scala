@@ -1,0 +1,18 @@
+object ClassAndObj {
+  def main(args: Array[String]): Unit = {
+    /**
+      * if...else...
+      * 类和对象
+       */
+    val age =20
+    if(age<20){
+      println("age<20")
+    }else if(age>=20&&age<30){
+      println("age>=20&&age<30")
+    }else{
+      println("age>=30")
+    }
+    
+  }
+  
+}
