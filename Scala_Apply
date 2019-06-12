@@ -1,0 +1,56 @@
+package com.cisco.scala
+
+/**
+  * 1.Scala中object相当于java中单例，object中定义的全部都是静态的，相当于Java中的工具类，object不可以传参，但是对象需要传参，使用对象的apply方法,Object中不支持传递参数
+  *   对象不能够传参
+  * 2.Scala中定义变量使用var，定义常量使用val，变量可变，常量不可变，变量和常量的类型可以不写，因为会自动推断。
+  * 3.scala中每行后面都会有分号自动推断机制，不用显式的写出分号
+  * 4.建议在Scala中命名使用驼峰命名法
+  * 5.Scala类中可以传参，传参一定要指定类型，有了参数就有了默认构造.
+  *   Class中额属性默认有getter方法和setter方法
+  *6.重写构造函数时，构造中的第一行必须先调用默认的构造函数.重写构造函数的时候
+  *   第一行要讲默认的构造函数写在第一行。def this(....){........}
+  *7.Scala中当new Class时，类中除了方法不执行【除了构造方法】，其他的都执行
+  *8.在同一个scala文件中，class名称和object名称一样的时候，这个类就叫做这个对象的伴生类，
+  * 这个对象叫做这个这个类的伴生对象，他们之间可以访问私有变量
+  *
+  *
+  */
+//创建一个类，给这个类传递了两个参数，传递的参数一定要指定值的类型
+class Person(var xname:String,xage:Int){
+  //属性加上private之后，其他类就看不到这个类了
+
+  private  val name =xname
+  var age = xage
+  var gender = 'M'
+
+
+  println("********Person Class**********")
+  def this(yname:String,yage:Int,ygender:Char){
+    this(yname,yage)
+    this.gender=ygender
+  }
+  def sayName(): Unit ={
+    println("hello world  "+ClassAndObj.name)
+  }
+  println("============Person Class===========")
+}
+
+object ClassAndObj {
+  //注意object是静态的，所以会先进行加载操作
+  println("####ClassAndObj########")
+  val name ="wang wu "
+  def apply(i:Int): Unit ={
+    println("Score is "+i)
+  }
+
+
+
+  def main(args: Array[String]): Unit = {
+   val p1 = new Person("zhangsan",20)
+//    println(p1.name)
+    ClassAndObj(10000)
+
+
+  }
+}
