@@ -1,0 +1,29 @@
+//创建一个类，给这个类传递了两个参数，传递的参数一定要指定值的类型
+class Person(var xname:String,xage:Int){
+  val name =xname
+  var age = xage
+  var gender = 'M'
+
+
+  println("********Person Class**********")
+  def this(yname:String,yage:Int,ygender:Char){
+    this(yname,yage)
+    this.gender=ygender
+  }
+  def sayName(): Unit ={
+    println("hello world  "+ClassAndObj.name)
+  }
+  println("============Person Class===========")
+}
+
+object ClassAndObj {
+  //注意object是静态的，所以会先进行加载操作
+  println("####ClassAndObj########")
+  val name ="wang wu "
+  def main(args: Array[String]): Unit = {
+   val p1 = new Person("zhangsan",20)
+
+
+
+  }
+}
