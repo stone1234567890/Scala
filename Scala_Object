@@ -1,0 +1,25 @@
+//创建一个类，给这个类传递了两个参数，传递的参数一定要指定值的类型
+class Person(var xname:String,xage:Int){
+  val name =xname
+  var age = xage
+
+  def sayName(): Unit ={
+    println("hello world  "+ClassAndObj.name)
+  }
+}
+
+object ClassAndObj {
+  val name ="wang wu "
+  def main(args: Array[String]): Unit = {
+    //变量的类型尽量用val的类型，比较容易回收
+    val p = new Person("zhangsan",40)
+//    p.age=20  //始终注意val类型的值是不可变的
+    p.age=300
+    println(p.name)
+    println(p.age)
+    p.sayName()
+
+    
+    
+  }
+}
