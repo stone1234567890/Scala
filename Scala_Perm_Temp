@@ -1,0 +1,18 @@
+object ClassAndObj {
+
+  def main(args: Array[String]): Unit = {
+    /**
+      * 可以通过.var进行类型推断
+      * 其次每行结尾的分号也可以省略，scala具有自动推断机制
+      *
+      */
+    val i: Int = 100
+    val a = i
+
+    var b =200
+    println(b)
+    b=300
+    println(b)
+    println(a)
+  }
+}
