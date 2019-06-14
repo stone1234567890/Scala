@@ -1,0 +1,17 @@
+package com.cisco.test
+
+object Test3 {
+  def main(args: Array[String]): Unit = {
+    /**
+      * for循环
+      * for(i<- 表达式)让变量i遍历<-右边的表达式的所有的值
+      * until:返回不包含上限的区间
+      */
+    val s = "Hello"
+    var sum = 0   //这个地方要用var，使得sum是个可变量  h的ascii码是72
+    for(i<-0 until s.length)
+      sum += s(i)
+//      println(s(i))
+    println(sum)
+  }
+}
