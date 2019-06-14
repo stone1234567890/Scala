@@ -1,0 +1,12 @@
+package com.cisco.test
+
+/**
+  * 遍历不需要使用下标
+  */
+object Test4_for {
+  def main(args: Array[String]): Unit = {
+    var  sum = 0
+    for(ch<-"Hello") sum+=ch
+    println(sum)
+  }
+}
