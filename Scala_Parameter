@@ -1,0 +1,21 @@
+package com.cisco.test
+
+object Scala_Parameter {
+  /**
+    * 如果相对参数给出的值不够，默认参数会从后向前诸葛的应用起来
+    * @param str
+    * @param left
+    * @param right
+    */
+
+  def decorate(str:String,left:String="[",right:String="]")={
+    println(left+str+right)
+  }
+
+  def main(args: Array[String]): Unit = {
+    decorate("Hello")
+    decorate(left = "<<<",str = "hello world",right = ">>>")
+  }
+
+
+}
