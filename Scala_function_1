@@ -1,0 +1,33 @@
+package com.cisco.test
+
+/**
+  * 要定义函数，需要给出函数名称、参数和函数体
+  * 必须给出所有参数的类型
+  * 如果函数不是递归的，就不需要指定返回值的类型
+  * Scala编译器可以通过=号右侧的表达式的类型推断出返回值的类型
+  * 如果函数体需要多个表达式来完成，可以使用代码块。块的最后一个表达式
+  * 的值就是函数的返回值。
+  */
+object fac {
+  def fac(n:Int)={
+    var r = 1
+    for(i<-1 to n) r=r*i
+    println(r)
+  }
+
+
+  /**
+    * 对于递归函数，我们必须指定函数的返回值的的类型
+    *
+     *
+    */
+  def fac1(n:Int):Int=if(n<=0) 1 else n*fac1(n-1)
+
+  def main(args: Array[String]): Unit = {
+    //求出5的阶乘
+    fac(5)
+
+    //递归的方式
+    println(fac1(6))
+  }
+}
