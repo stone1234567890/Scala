@@ -1,0 +1,17 @@
+package com.cisco.test
+
+/**
+  *在JVM中，Scala的Array是以Java数组的方式实现的。
+  */
+object Array {
+  def main(args: Array[String]): Unit = {
+    //用Array定义一个长度不变的数组
+    val nums = new Array[Int](10)
+    //定义一个10个元素的字符串数组，所有元素初始化为null
+    val a = new Array[String](10)
+    //长度为2的Array[String],这是类型推断出来的
+    val s=Array("Hello","World")
+    s(0)="GoodBye"
+    println(s)
+  }
+}
