@@ -1,0 +1,24 @@
+package com.cisco.test
+
+/**
+  * Scala中对于不返回值的函数有特殊的表示方法，如果函数体包含在花括号中
+  * 但是前面没有=号，那么返回值的类型就是Unit，这样的函数就被称为过程(procedure)
+  * 过程没有返回值，我们调用它仅仅是为了它的副作用
+  */
+object Scala_Procedure {
+  /**
+    * 定义过程，没有返回值
+    */
+  def box(s:String){  //由于过程不返回任何值。所以可以省略=号
+    var border ="-"*s.length+"--\n"
+    println(border+"|"+s+"|\n"+border)
+  }
+
+  def main(args: Array[String]): Unit = {
+    box("hello jack")
+  }
+
+
+
+
+}
