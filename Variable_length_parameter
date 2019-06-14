@@ -1,0 +1,14 @@
+package com.cisco.test
+
+object Variable_length_parameter {
+  def sum(args:Int*): Unit ={
+    var result = 0
+    for(arg<-args) result+=arg
+    println(result)
+  }
+
+  def main(args: Array[String]): Unit = {
+    sum(1,3,5,7,9)
+  }
+
+}
